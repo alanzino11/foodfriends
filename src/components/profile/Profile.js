@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { IconButton, Button } from "@chakra-ui/core";
 
 import './Profile.css';
 import image from '../../images/image.png';
 import Pill from '../Pill'
 
-const Profile = (props) => {
+const Profile = ({profile}) => {
+    const [isFollowing, setFollowing] = useState("Follow");
 
     return (
         <div className="profile">
@@ -17,23 +18,22 @@ const Profile = (props) => {
                     <img src={image} alt=""/>
                 </div>
                 <div className="info">
-                    <b>Anna Lanzino</b>
+                    <b>{profile.name}</b>
                 </div>
                 <div className="dietpills">
-                    <div className="pill"><Pill data="vegan"/></div>
-                </div>
-                <div className="foodpills">
-                    <div className="pill"><Pill data="Cuban"/></div>
-                    <div className="pill"><Pill data="Indian"/></div>
+                    <div className="pill"><Pill data={profile.diet}/></div>
                 </div>
                 <div className="info">
-                    <b>Gainesville, FL</b> &nbsp; | &nbsp; <b>$$</b>
+                    <b>{profile.city}, FL</b> &nbsp; | &nbsp; <b>{profile.priceRange}</b>
                 </div>
                 <div className="info">
-                    <b>Favorite Restaurants:</b> &nbsp; Karma Cream, Kabab House
+                    <b>Favorite Restaurants:</b> &nbsp; {profile.places[0]}, {profile.places[1]}
+                </div>
+                <div className="info">
+                    <b>Favorite Foods:</b> &nbsp; {profile.foods[0]}, {profile.foods[1]}
                 </div>
                 <div className="buttons">
-                    <button className="followbutton">Follow</button>
+                    <div className="image"><button className="followbutton" onClick={() => setFollowing("Following")}>{isFollowing}</button></div>
                     <IconButton 
                       variantColor="teal"
                       aria-label="Call Segun"

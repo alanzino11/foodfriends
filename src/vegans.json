@@ -11,28 +11,6 @@
       "city": "Tampa"
     },
     {
-      "_id": "5f89d0e8d8bc43a6698f8380",
-      "index": 1,
-      "picture": "http://placehold.it/32x32",
-      "name": "Guy Briggs",
-      "priceRange": "$$$",
-      "places": ["Karma Cream", "Amelia's"],
-      "foods": ["Italian", "Cuban"],
-      "diet": "keto",
-      "city": "Ocala"
-    },
-    {
-      "_id": "5f89d0e848c36048c6ddbf57",
-      "index": 2,
-      "picture": "http://placehold.it/32x32",
-      "name": "Neal Cain",
-      "priceRange": "$$$",
-      "places": ["BurgerFi", "Social"],
-      "foods": ["Italian", "Chinese"],
-      "diet": "gluten-free",
-      "city": "Gainesville"
-    },
-    {
       "_id": "5f89d0e85653ebe5c4ed795a",
       "index": 3,
       "picture": "http://placehold.it/32x32",
@@ -41,28 +19,6 @@
       "places": ["BurgerFi", "Grub"],
       "foods": ["American", "Indian"],
       "diet": "vegan",
-      "city": "Gainesville"
-    },
-    {
-      "_id": "5f89d0e8f97131e44255a8f6",
-      "index": 4,
-      "picture": "http://placehold.it/32x32",
-      "name": "Carmela Norman",
-      "priceRange": "$$",
-      "places": ["Karma Cream", "Amelia's"],
-      "foods": ["Japanese", "American"],
-      "diet": "gluten-free",
-      "city": "Gainesville"
-    },
-    {
-      "_id": "5f89d0e87eeba8a3debf85b9",
-      "index": 5,
-      "picture": "http://placehold.it/32x32",
-      "name": "Lenora Galloway",
-      "priceRange": "$$$",
-      "places": ["Taco Bell", "Amelia's"],
-      "foods": ["Mexican", "Italian"],
-      "diet": "gluten-free",
       "city": "Gainesville"
     },
     {
@@ -88,17 +44,6 @@
       "city": "Orlando"
     },
     {
-      "_id": "5f89d0e872cbd85657ded8cf",
-      "index": 8,
-      "picture": "http://placehold.it/32x32",
-      "name": "Jill Gamble",
-      "priceRange": "$$",
-      "places": ["Starbucks", "Chipotle"],
-      "foods": ["Cuban", "BBQ"],
-      "diet": "gluten-free",
-      "city": "Tampa"
-    },
-    {
       "_id": "5f89d0e82db98e7558daa781",
       "index": 9,
       "picture": "http://placehold.it/32x32",
@@ -108,17 +53,6 @@
       "foods": ["Korean", "BBQ"],
       "diet": "vegan",
       "city": "Tampa"
-    },
-    {
-      "_id": "5f89d0e83c9634aba0070341",
-      "index": 10,
-      "picture": "http://placehold.it/32x32",
-      "name": "Isabella Maxwell",
-      "priceRange": "$$",
-      "places": ["Karma Cream", "Flaco's"],
-      "foods": ["Cuban", "Indian"],
-      "diet": "keto",
-      "city": "Gainesville"
     },
     {
       "_id": "5f89d0e8b072bcf88c749cfc",
@@ -141,17 +75,6 @@
       "foods": ["Latin", "American"],
       "diet": "vegan",
       "city": "Ocala"
-    },
-    {
-      "_id": "5f89d0e8af9ecfb2a5132e6c",
-      "index": 13,
-      "picture": "http://placehold.it/32x32",
-      "name": "Savannah Bernard",
-      "priceRange": "$$",
-      "places": ["Capitol Grille", "Arabella's"],
-      "foods": ["Latin", "Indian"],
-      "diet": "gluten-free",
-      "city": "Orlando"
     },
     {
       "_id": "5f89d0e8dee27aad47a3a6c4",

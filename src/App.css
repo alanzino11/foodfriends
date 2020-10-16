@@ -1,11 +1,14 @@
 .App {
   text-align: center;
-}
-
-.explorepage {
   background-color: whitesmoke;
+  min-height:100vh;
 }
 
 .dietbutton {
   padding: 10px;
+}
+
+.filter-icon {
+  padding-left: 10px;
+  padding-right: 10px;
 }
