@@ -1,4 +1,5 @@
 import React from 'react';
+import { IconButton, Button } from "@chakra-ui/core";
 
 import './Profile.css';
 import image from '../../images/image.png';
@@ -6,15 +7,14 @@ import Pill from '../Pill'
 
 const Profile = (props) => {
 
-
     return (
         <div className="profile">
-            <div className="upper">
+            <div className="content">
                 <div className="edit">
-                    <button type="button">Edit</button>
+                    <Button>Edit</Button>
                 </div>
                 <div className="image">
-                    <img src={image} height={200}/>
+                    <img src={image} alt=""/>
                 </div>
                 <div className="info">
                     <b>Anna Lanzino</b>
@@ -32,8 +32,17 @@ const Profile = (props) => {
                 <div className="info">
                     <b>Favorite Restaurants:</b> &nbsp; Karma Cream, Kabab House
                 </div>
+                <div className="buttons">
+                    <button className="followbutton">Follow</button>
+                    <IconButton 
+                      variantColor="teal"
+                      aria-label="Call Segun"
+                      size="lg"
+                      icon="triangle-down"
+                      height={10}
+                    />
+                </div>
             </div>
-
         </div>
     )
 }

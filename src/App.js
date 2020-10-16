@@ -1,13 +1,12 @@
 import React from 'react';
 
 import './App.css';
-import Profile from './components/profile/Profile';
-import Pill from './components/Pill'
+import Explore from './Explore';
 
 function App() {
   return (
     <div className="App">
-      <Profile/>
+      <Explore/>
     </div>
   );
 }
