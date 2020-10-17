@@ -5,7 +5,7 @@ import './Profile.css';
 import image from '../../images/image.png';
 import Pill from '../Pill'
 
-const Profile = ({profile}) => {
+const Profile = ({profile, setDropdownIndex}) => {
     const [isFollowing, setFollowing] = useState("Follow");
     const [icon, setIcon] = useState("triangle-down");
     const [showSimilarProfiles, setShowSimilarProfiles] = useState(false);
@@ -13,6 +13,7 @@ const Profile = ({profile}) => {
     const dropdown = () => {
         icon === "triangle-down" ? setIcon("triangle-up") : setIcon("triangle-down");
         setShowSimilarProfiles(!showSimilarProfiles);
+        showSimilarProfiles ? setDropdownIndex(-1) : setDropdownIndex(profile.index);
     }
 
     return (
@@ -25,7 +26,7 @@ const Profile = ({profile}) => {
                     <img src={image} alt=""/>
                 </div>
                 <div className="info">
-                    <b>{profile.name}</b>
+                    <span className="name"><b>{profile.name}</b></span>
                 </div>
                 <div className="dietpills">
                     <div className="pill"><Pill data={profile.diet}/></div>

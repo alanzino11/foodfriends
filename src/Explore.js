@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   Heading,
   Stack,
@@ -11,19 +11,20 @@ import {
   Checkbox, 
   Flex,
   Spinner,
-  useDisclosure
 } from "@chakra-ui/core";
 import { FaFilter } from 'react-icons/fa';
 
 import jsonprofiles from './profiles.json';
 import veganprofiles from './vegans.json';
+import similarprofiles from './similarprofiles.json'
 import './App.css'
 import Profile from './components/profile/Profile';
+import SimilarProfile from './components/profile/SimilarProfile.js';
 
 const Explore = () => {
   const [profiles, setProfiles] = useState(jsonprofiles)
   const [isLoading, setLoading] = useState(false);
-  const { isOpen, onClose } = useDisclosure();
+  const [clickedIndex, setClickedIndex] = useState(-1);
 
   console.log(profiles)
 
@@ -31,6 +32,10 @@ const Explore = () => {
     setLoading(true);
     setTimeout(() => setLoading(false), 500)
     setProfiles(veganprofiles)
+  }
+
+  const setDropdownIndex = (index) => {
+    setClickedIndex(index)
   }
 
   return (
@@ -85,10 +90,18 @@ const Explore = () => {
               size="xl"
             /> : (
             <Flex wrap="wrap" justify="space-around">
-              {profiles.map(p => {
+              {profiles.map((p, index) => {
                 return (
                   <div style={{ paddingBottom: "10px" }}>
-                    <Profile profile={p}/>
+                    <Profile profile={p} setDropdownIndex={setDropdownIndex}/>
+                    {index === clickedIndex ? (
+                      <div className="similar-profiles">
+                        {similarprofiles.map(p => {
+                          return (
+                          <SimilarProfile profile={p}/>
+                        )})}
+                      </div> 
+                      ) : null}
                   </div>)
               })}
             </Flex>
