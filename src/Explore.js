@@ -86,7 +86,10 @@ const Explore = () => {
             /> : (
             <Flex wrap="wrap" justify="space-around">
               {profiles.map(p => {
-                return <div style={{ paddingBottom: "10px" }}><Profile profile={p}/></div>
+                return (
+                  <div style={{ paddingBottom: "10px" }}>
+                    <Profile profile={p}/>
+                  </div>)
               })}
             </Flex>
           )

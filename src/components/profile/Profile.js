@@ -7,6 +7,13 @@ import Pill from '../Pill'
 
 const Profile = ({profile}) => {
     const [isFollowing, setFollowing] = useState("Follow");
+    const [icon, setIcon] = useState("triangle-down");
+    const [showSimilarProfiles, setShowSimilarProfiles] = useState(false);
+
+    const dropdown = () => {
+        icon === "triangle-down" ? setIcon("triangle-up") : setIcon("triangle-down");
+        setShowSimilarProfiles(!showSimilarProfiles);
+    }
 
     return (
         <div className="profile">
@@ -38,8 +45,9 @@ const Profile = ({profile}) => {
                       variantColor="teal"
                       aria-label="Call Segun"
                       size="lg"
-                      icon="triangle-down"
+                      icon={icon}
                       height={10}
+                      onClick={dropdown}
                     />
                 </div>
             </div>
